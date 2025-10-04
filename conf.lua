@@ -3,6 +3,8 @@ function love.conf(t)
     t.window.title = "screen"
     t.window.width = 640
     t.window.height = 480
+    t.window.borderless = true
+    t.window.fullscreen = true
     t.version = "11.5"
 
     t.modules.physics = false

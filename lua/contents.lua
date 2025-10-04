@@ -7,11 +7,16 @@ function gameLoop(dt)
         dvdUpdate(dt)
         dvdCol()
     end
+    exitAnim(dt)
 end
 
 function gameKey(key)
     if key == "escape" then
-        love.event.quit(0)
+        if exitBool == false then
+            exitBool = true
+        else
+            love.event.quit(0)
+        end
     end
 
     if key == "f4" then
@@ -22,15 +27,11 @@ function gameKey(key)
         end
     end
 
-    if key == "f11" then
-        if love.window.getFullscreen() == false then
-            love.window.setFullscreen(true)
+    if key == "f5" then
+        if isStats == false then
+            isStats = true
         else
-            love.window.setFullscreen(false)
-        end
-
-        if state == "dvd" then
-            dvdInit()
+            isStats = false
         end
     end
 end

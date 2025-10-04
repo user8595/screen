@@ -10,9 +10,15 @@ textures = {
 }
 
 -- boolean
-showUI = false
-UITimeout = 0
+exitBool = false
+exitTimeout = 0
 isDebug = false
+isStats = false
+
+stats = {
+    corner = 0 - 1,
+    hit = 0
+}
 
 state = "dvd" -- "dvd"
 
@@ -25,3 +31,5 @@ colors = {
     {1, 0, 1, 1},
     {0, 1, 1, 1},
 }
+
+exitColor = {1, 1, 1, 0}
